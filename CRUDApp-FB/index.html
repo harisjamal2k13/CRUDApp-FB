@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Firebase Realtime Database Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script> // Your web app's Firebase configuration 
+    var firebaseConfig = {
+        apiKey: "AIzaSyBHuoyFezvidJuwHVWIQZvRLYTPgacgzss",
+        authDomain: "testing-bc485.firebaseapp.com",
+        databaseURL: "https://testing-bc485.firebaseio.com",
+        projectId: "testing-bc485",
+        storageBucket: "testing-bc485.appspot.com",
+        messagingSenderId: "735434937557",
+        appId: "1:735434937557:web:15d9ef34f1a384ca67fe5c",
+        measurementId: "G-GNR3SK85Z8"
+    };
+    firebase.initializeApp(firebaseConfig); 
+</script>
+
+<body>
+    <div class="container">
+        <h1>Firebase CRUD App</h1>
+        <table class="table">
+
+            <b>ID: </b>
+            <input type="text" name="id" id="user_id" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" />
+            <b>Username: </b>
+            <input type="text" name="user_name" id="user_name" class="form-control" id="exampleInputPassword1" />
+            <br>
+            <div id="btns">
+                <input type="button" value="Add" onclick="save_user();" class="btn btn-success" />
+                <input type="button" value="Edit" onclick="update_user();" class="btn btn-primary" />
+                <input type="button" value="Delete" onclick="delete_user();" class="btn btn-danger" />
+            </div>
+
+
+        </table>
+        <h3>Users List</h3>
+        <table id="tbl_users_list" class="table" border="1">
+            <tr>
+                <td scope="col" id="ids">#ID</td>
+                <td scope="col" id="namo">NAME</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+</html>
